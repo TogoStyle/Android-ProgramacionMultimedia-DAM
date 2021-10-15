@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Practica4-AntonioVR</string>
+    <string name="textViewInfo">Conversor de pulgadas a centímetros</string>
+    <string name="textViewHintPedir">Introduce las pulgadas</string>
+    <string name="buttonConvertir">Convertir</string>
+    <string name="editTextHintResultado">Resultado</string>
+</resources>

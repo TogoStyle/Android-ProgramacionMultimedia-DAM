@@ -28,6 +28,10 @@ public class MainActivity extends LogActivity {
             }
         });
     }
+    //Expresion lamdba
+    /*Button btNextActivity = findViewById(R.id.btNextActivity);
+        btNextActivity.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, NextActivity.class)));
+*/
 
 
     public void LauncherNextActivity(View view) {

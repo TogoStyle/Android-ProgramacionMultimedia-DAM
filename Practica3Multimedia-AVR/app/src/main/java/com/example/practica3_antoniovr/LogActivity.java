@@ -20,8 +20,8 @@ public class LogActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Log.i(DEBUG_TAG, ACTIVITY_CLASS + " onCreate");
     }
-
 
 
     public void launchNextActivity(View view) {
@@ -31,76 +31,76 @@ public class LogActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        Log.i(DEBUG_TAG, ACTIVITY_CLASS+" onPause");
+        Log.i(DEBUG_TAG, ACTIVITY_CLASS + " onPause");
         notify(" onPause");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        Log.i(DEBUG_TAG, ACTIVITY_CLASS+" onResume");
+        Log.i(DEBUG_TAG, ACTIVITY_CLASS + " onResume");
         notify(" onResume");
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        Log.i(DEBUG_TAG, ACTIVITY_CLASS+" onStart");
+        Log.i(DEBUG_TAG, ACTIVITY_CLASS + " onStart");
         notify(" onStart");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        Log.i(DEBUG_TAG, ACTIVITY_CLASS+" onStop");
+        Log.i(DEBUG_TAG, ACTIVITY_CLASS + " onStop");
         notify(" onStop");
     }
 
     @Override
     protected void onRestart() {
         super.onRestart();
-        Log.i(DEBUG_TAG, ACTIVITY_CLASS+" onRestart");
+        Log.i(DEBUG_TAG, ACTIVITY_CLASS + " onRestart");
         notify(" onRestart");
     }
 
     @Override
-    protected void  onSaveInstanceState(Bundle outState){
+    protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        Log.i(DEBUG_TAG, ACTIVITY_CLASS+" onSaveInstanceState");
+        Log.i(DEBUG_TAG, ACTIVITY_CLASS + " onSaveInstanceState");
         notify(" onSaveInstanceState");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.i(DEBUG_TAG, ACTIVITY_CLASS+" onDestroy");
-        if (isFinishing()){
-            Log.i(DEBUG_TAG, ACTIVITY_CLASS+" finishedByUser");
-        } else Log.i(DEBUG_TAG, ACTIVITY_CLASS+" finishedBySystem");
+        Log.i(DEBUG_TAG, ACTIVITY_CLASS + " onDestroy");
+        if (isFinishing()) {
+            Log.i(DEBUG_TAG, ACTIVITY_CLASS + " finishedByUser");
+        } else Log.i(DEBUG_TAG, ACTIVITY_CLASS + " finishedBySystem");
         notify(" onDestroy");
     }
 
 
-    protected void onRestoreInstanceState(Bundle savedInstanceState){
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
-        Log.i(DEBUG_TAG, ACTIVITY_CLASS+" onRestoreInstaceState");
+        Log.i(DEBUG_TAG, ACTIVITY_CLASS + " onRestoreInstaceState");
         notify(" onRestoreInstanceState");
     }
 
-    private void notify(String eventName){
+    private void notify(String eventName) {
         String activityName = this.getClass().getSimpleName();
 
         String CHANNEL_ID = "My_LifeCycle";
 
-    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
-        NotificationChannel notificationChannel = new NotificationChannel(CHANNEL_ID, "My Lifecycle", NotificationManager.IMPORTANCE_DEFAULT);
-        notificationChannel.setDescription("lifecycle events");
-        notificationChannel.setShowBadge(true);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            NotificationChannel notificationChannel = new NotificationChannel(CHANNEL_ID, "My Lifecycle", NotificationManager.IMPORTANCE_DEFAULT);
+            notificationChannel.setDescription("lifecycle events");
+            notificationChannel.setShowBadge(true);
 
-        NotificationManager notificationManager = getSystemService(NotificationManager.class);
-        if (notificationManager!= null){
-            notificationManager.createNotificationChannel(notificationChannel);
-        }
+            NotificationManager notificationManager = getSystemService(NotificationManager.class);
+            if (notificationManager != null) {
+                notificationManager.createNotificationChannel(notificationChannel);
+            }
         }
         NotificationManagerCompat notificationManagerCompat = NotificationManagerCompat.from(this);
 
