@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayoutButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="32dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/buttonReset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reset Elements"
+            tools:layout_conversion_absoluteHeight="48dp"
+            tools:layout_editor_absoluteY="118dp"
+            tools:layout_editor_absoluteX="32dp"
+            tools:layout_conversion_absoluteWidth="230dp" />
+
+        <Button
+            android:id="@+id/buttonIncrease"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Increase One Element"
+            tools:layout_conversion_absoluteHeight="48dp"
+            tools:layout_editor_absoluteY="198dp"
+            tools:layout_editor_absoluteX="32dp"
+            tools:layout_conversion_absoluteWidth="230dp" />
+
+        <Button
+            android:id="@+id/buttonDecrease"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Decrease One Element"
+            tools:layout_conversion_absoluteHeight="48dp"
+            tools:layout_editor_absoluteY="278dp"
+            tools:layout_editor_absoluteX="32dp"
+            tools:layout_conversion_absoluteWidth="230dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="32dp"
+        android:text="@string/number_of_elements"
+        android:textSize="20sp" />
+
+</LinearLayout>
