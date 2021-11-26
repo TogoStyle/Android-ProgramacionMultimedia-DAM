@@ -1,0 +1,4 @@
+dam/androidtvr/u3t2implicitintents/MainActivity.java
+ dam.androidtvr.u3t2implicitintents.MainActivity
+dam/androidtvr/u3t2implicitintents/BuildConfig.java
+ dam.androidtvr.u3t2implicitintents.BuildConfig

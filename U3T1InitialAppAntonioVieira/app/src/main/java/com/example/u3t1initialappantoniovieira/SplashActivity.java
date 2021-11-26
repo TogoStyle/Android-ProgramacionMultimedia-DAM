@@ -20,7 +20,6 @@ public class SplashActivity extends AppCompatActivity {
             public void run() {
                 try {
                     sleep(5000);
-                    //NO VA EL SONIDO :(
                     sound = MediaPlayer.create(getApplicationContext(), R.raw.sonido);
                     sound.start();
                 } catch (InterruptedException e) {

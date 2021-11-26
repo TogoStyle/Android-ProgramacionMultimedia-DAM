@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">U3T2ImplicitIntents</string>
+    <string name="et_uri">https://developer.android.com</string>
+    <string name="bt_open_uri">Open Website</string>
+
+    <string name="et_location">Pont Fernando Reig Alcoi</string>
+    <string name="bt_open_location">Open Location</string>
+
+    <string name="et_text">This is the text I wanna share</string>
+    <string name="bt_share_text">Share this Text</string>
+</resources>

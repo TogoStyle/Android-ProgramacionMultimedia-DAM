@@ -1,0 +1,10 @@
+#Sat Nov 06 19:22:09 CET 2021
+base.2=/home/tonivr/AndroidStudioProjects/ProgramacionMultimedia/ProgramacionMultimedia/U3T2ImplicitIntents/app_ejercicios/build/intermediates/dex/debug/mergeProjectDexDebug/1/classes.dex
+path.2=1/classes.dex
+base.1=/home/tonivr/AndroidStudioProjects/ProgramacionMultimedia/ProgramacionMultimedia/U3T2ImplicitIntents/app_ejercicios/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
+path.1=0/classes.dex
+base.0=/home/tonivr/AndroidStudioProjects/ProgramacionMultimedia/ProgramacionMultimedia/U3T2ImplicitIntents/app_ejercicios/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
+renamed.2=classes3.dex
+renamed.1=classes2.dex
+renamed.0=classes.dex
+path.0=classes.dex
