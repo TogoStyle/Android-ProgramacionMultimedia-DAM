@@ -197,7 +197,6 @@ public class MainActivity extends AppCompatActivity implements MyAdapter.OnItemC
     }
 
     public void onDeleteAll(View view) {
-
         items.clear();
         icono.setVisibility(View.VISIBLE);
         mAdapter.notifyDataSetChanged();

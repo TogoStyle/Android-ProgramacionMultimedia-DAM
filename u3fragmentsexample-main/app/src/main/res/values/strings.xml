@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">U3FragmentsExample</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment1">Hello from fragment 1 !!!!!</string>
+    <string name="hello_blank_fragment2">Hello from fragment 2 !!!!!</string>
+    <string name="hello_fragments">Hello Fragments !!</string>
+    <string name="add_fragment_button">Add fragment</string>
+
+</resources>

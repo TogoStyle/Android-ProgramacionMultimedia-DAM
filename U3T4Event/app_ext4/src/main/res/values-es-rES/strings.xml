@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">U3T4Event</string>
+    <string name="tvPriority">Prioridad</string>
+    <string name="rbLow">Baja</string>
+    <string name="rbNormal">Normal</string>
+    <string name="rbHigh">Alta</string>
+    <string name="btAccept">Aceptar</string>
+    <string name="btCancel">Cancelar</string>
+    <string name="etEventName">Nombre del Evento</string>
+    <string name="tvEventName">Nombre del Evento</string>
+    <string name="tvSetDateTime">Fecha y Hora</string>
+    <string name="title_activity_event_data">Titulo de la activity Event Data</string>
+    <string name="tvNewEvent">Nuevo Evento</string>
+    <string name="Place">Sitio</string>
+    <string name="tvCurrentDataLabel">Información Actual</string>
+    <string name="Fecha">Fecha</string>
+    <string name="EscogerFecha">Seleccionar Fecha</string>
+    <string name="Hora">Hora</string>
+    <string name="EscogerHora">Seleccionar Hora</string>
+</resources>
