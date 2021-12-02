@@ -57,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, EventDataActivity.class);
         Bundle bundle = new Bundle();
 
+        bundle.putString("OldInfo", tvCurrentData.getText().toString());
         bundle.putString("EventName", etEventName.getText().toString());
 
         intent.putExtras(bundle);

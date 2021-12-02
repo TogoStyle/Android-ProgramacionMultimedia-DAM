@@ -31,6 +31,7 @@ public class EventDataActivity extends AppCompatActivity  implements View.OnClic
     private EditText place;
 
     String[] months;
+    private String oldData;
 
     private Button date_in;
     private Button time_in;
@@ -51,6 +52,8 @@ public class EventDataActivity extends AppCompatActivity  implements View.OnClic
         Bundle inputData = getIntent().getExtras();
 
         tvEventName.setText(inputData.getString("EventName"));
+        oldData = inputData.getString("OldInfo");
+
 
         months = getResources().getStringArray(R.array.months);
 
@@ -140,7 +143,7 @@ public class EventDataActivity extends AppCompatActivity  implements View.OnClic
                     "Hour-> ".toUpperCase() + calendarTime.get(Calendar.HOUR_OF_DAY) + ":" + calendarTime.get(Calendar.MINUTE));
                 break;
             case R.id.btCancel:
-                eventData.putString("EventData", "");
+                eventData.putString("EventData", oldData);
                 break;
         }
         activityResult.putExtras(eventData);
