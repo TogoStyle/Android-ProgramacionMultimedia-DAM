@@ -24,8 +24,6 @@ public class EventDataActivity extends AppCompatActivity  implements View.OnClic
     private String priority = "Normal";
     private TextView tvEventName;
     private RadioGroup rgPriority;
-    private DatePicker dpDate;
-    private TimePicker tpTime;
     private Button btAccept;
     private Button btCancel;
     private EditText place;
@@ -118,8 +116,6 @@ public class EventDataActivity extends AppCompatActivity  implements View.OnClic
         tvEventName = (TextView) findViewById(R.id.tvEventName);
         rgPriority = (RadioGroup) findViewById(R.id.rgPriority);
         rgPriority.check(R.id.rbNormal);
-       /* dpDate = (DatePicker) findViewById(R.id.dpDate);
-        tpTime = (TimePicker) findViewById(R.id.tpTime);*/
         btAccept = (Button) findViewById(R.id.btAccept);
         btCancel = (Button) findViewById(R.id.btCancel);
         place = (EditText) findViewById(R.id.editTextPlace);
