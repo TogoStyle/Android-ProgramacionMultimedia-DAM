@@ -8,3 +8,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "U4T6Contacts"
 include ':app'
+include ':app_activ1'
