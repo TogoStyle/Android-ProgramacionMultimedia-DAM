@@ -1,27 +1,27 @@
 package dam.androidantoniovr.u4t6contacts;
 
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.List;
-
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     private MyContacts myContacts;
 
     static class MyViewHolder extends RecyclerView.ViewHolder{
-        TextView textView;
+        TextView id, name, number;
+        ImageView img;
 
-        public MyViewHolder(TextView view){
+        public MyViewHolder(View view){
             super(view);
-            this.textView = view;
-        }
-
-        public void bind(String contactData){
-            this.textView.setText(contactData);
+            this.id = view.findViewById(R.id.userId);
+            this.name = view.findViewById(R.id.userName);
+            this.number = view.findViewById(R.id.userNumber);
+            this.img = view.findViewById(R.id.userPhoto);
         }
     }
 
@@ -32,15 +32,25 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType){
-        TextView tv = (TextView) LayoutInflater.from(parent.getContext())
+        View tv = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.contact_cards, parent, false);
 
         return new MyViewHolder(tv);
     }
 
+    //TODO - Código necesario para mostar en cada CardView la información necesaria de cada contacto
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder viewHolder, int position){
-        viewHolder.bind(myContacts.getContactData(position));
+
+        ContactItem contact = myContacts.getContactData(position);
+        viewHolder.id.setText(contact.getId());
+        viewHolder.name.setText(contact.getName());
+        viewHolder.number.setText(contact.getNumber());
+
+        if (contact.getPhoto() != null) {
+            viewHolder.img.setImageURI(contact.getPhoto());
+        } else viewHolder.img.setImageResource(R.mipmap.ic_launcher_round);
+
     }
 
     @Override
