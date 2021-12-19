@@ -15,6 +15,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         void onContactClick(ContactItem contact);
     }
 
+
+
     private MyContacts myContacts;
     private MyAdapter.OnContactClickListener listener;
 
@@ -46,6 +48,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             }
 
             this.view.setOnClickListener(v -> listener.onContactClick(item));
+//            this.view.setOnLongClickListener(v -> listener.onContactClick(item));
         }
     }
 
