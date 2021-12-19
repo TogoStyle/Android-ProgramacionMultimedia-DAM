@@ -1,0 +1,14 @@
+dam/androidantoniovr/u4t6contacts/BuildConfig.java
+ dam.androidantoniovr.u4t6contacts.BuildConfig
+dam/androidantoniovr/u4t6contacts/ContactItem.java
+ dam.androidantoniovr.u4t6contacts.ContactItem
+dam/androidantoniovr/u4t6contacts/MyContacts.java
+ dam.androidantoniovr.u4t6contacts.MyContacts
+dam/androidantoniovr/u4t6contacts/MyAdapter.java
+ dam.androidantoniovr.u4t6contacts.MyAdapter
+ dam.androidantoniovr.u4t6contacts.MyAdapter$MyViewHolder
+ dam.androidantoniovr.u4t6contacts.MyAdapter$OnContactClickListener
+dam/androidantoniovr/u4t6contacts/ContactDetailActivity.java
+ dam.androidantoniovr.u4t6contacts.ContactDetailActivity
+dam/androidantoniovr/u4t6contacts/MainActivity.java
+ dam.androidantoniovr.u4t6contacts.MainActivity
