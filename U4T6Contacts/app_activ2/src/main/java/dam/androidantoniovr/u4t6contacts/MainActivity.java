@@ -34,8 +34,16 @@ public class MainActivity extends AppCompatActivity implements MyAdapter.OnConta
 
         setUI();
 
+
+    }
+
+    //TODO - mantener contactos actualizados
+    @Override
+    protected void onResume() {
+
+        super.onResume();
         if (checkPermissions())
-        setListAdapter();
+            setListAdapter();
     }
 
     private void setUI(){
