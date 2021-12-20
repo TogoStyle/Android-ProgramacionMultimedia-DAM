@@ -13,8 +13,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     public interface OnContactClickListener {
         void onContactClick(ContactItem contact);
+        boolean onContactHold(ContactItem contact);
+        
     }
-
 
 
     private MyContacts myContacts;
@@ -48,11 +49,11 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             }
 
             this.view.setOnClickListener(v -> listener.onContactClick(item));
-//            this.view.setOnLongClickListener(v -> listener.onContactClick(item));
+            this.view.setOnLongClickListener(v -> listener.onContactHold(item));
         }
     }
 
-    MyAdapter(MyContacts myContacts, OnContactClickListener listener) {
+    MyAdapter(MyContacts myContacts, OnContactClickListener listener ) {
         this.myContacts = myContacts;
         this.listener = listener;
     }

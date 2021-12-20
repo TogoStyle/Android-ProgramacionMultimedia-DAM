@@ -2,34 +2,20 @@ package dam.androidantoniovr.u4t6contacts;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
-import androidx.constraintlayout.widget.ConstraintSet;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentContainerView;
-import androidx.fragment.app.FragmentTransaction;
-import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.Manifest;
-import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
-import android.view.LayoutInflater;
+import android.provider.ContactsContract;
 import android.view.View;
-import android.view.ViewAnimationUtils;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.view.animation.TranslateAnimation;
-import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
-
-import com.google.android.material.bottomsheet.BottomSheetDialog;
-
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements MyAdapter.OnContactClickListener{
     MyContacts myContacts;
@@ -125,4 +111,11 @@ public class MainActivity extends AppCompatActivity implements MyAdapter.OnConta
 
     }
 
+    //TODO - Holdear contacto para verlo desde la app de contacts
+    @Override
+    public boolean onContactHold(ContactItem contact) {
+        Intent intent = new Intent(Intent.ACTION_VIEW, ContactsContract.Contacts.getLookupUri(Long.parseLong(contact.getId()), contact.getLookup()));
+        this.startActivity(intent);
+        return true;
+    }
 }
