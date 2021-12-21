@@ -5,6 +5,7 @@ import android.net.Uri;
 import java.io.Serializable;
 
 //TODO - Clase ContactItem
+//CLASE DEL OBJETO CONTACTO, CON ATRIBUTOS, CONSTRUCTORES Y GETTER Y SETTERS
 public class ContactItem  implements Serializable {
 
     private String Id;

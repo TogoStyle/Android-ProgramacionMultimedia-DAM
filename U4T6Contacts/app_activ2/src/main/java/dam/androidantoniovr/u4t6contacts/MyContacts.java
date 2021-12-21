@@ -17,7 +17,7 @@ public class MyContacts {
         this.context = context;
         this.myDataSet = getContacts();
     }
-
+    //OBTIENE LOS CONTACTOS / LISTA DE CONTACTOS DEL CONTACTSPROVIDER
     private ArrayList<ContactItem> getContacts() {
         ArrayList<ContactItem> contactList = new ArrayList<>();
 
@@ -25,7 +25,10 @@ public class MyContacts {
         ContentResolver contentResolver = context.getContentResolver();
 
         //TODO - 10.1 Modifica Consulta
-        String[] projection = new String[]{ContactsContract.Data._ID,
+        //MODIFICO LA CONSULTA O QUERY PARA OBTENER TODOS LOS ATRIBUTOS DE CADA CONTACTO
+        //EN VARIBALES AUXILIARES
+        String[] projection = new String[]{
+                ContactsContract.Data._ID,
                 ContactsContract.Data.DISPLAY_NAME,
                 ContactsContract.CommonDataKinds.Phone.NUMBER,
                 ContactsContract.Data.CONTACT_ID,
@@ -46,6 +49,7 @@ public class MyContacts {
                 ContactsContract.Data.DISPLAY_NAME + " ASC");
 
         //TODO - Código necesario para mostar y gestionar toda la información de cada contacto
+        //RECOGEMOS ATRIBUTO POR ATRIBUTO DE LOS CONTACTOS SEGUN LA COLUMNA LA INFORMACIÓN Y LA ALMACENAMOS EN VARIABLES
         if (contactsCursor != null) {
             int nameIndex = contactsCursor.getColumnIndexOrThrow(ContactsContract.Data.DISPLAY_NAME);
             int numberIndex = contactsCursor.getColumnIndexOrThrow(ContactsContract.CommonDataKinds.Phone.NUMBER);
@@ -55,6 +59,7 @@ public class MyContacts {
             int phoneType = contactsCursor.getColumnIndexOrThrow(ContactsContract.CommonDataKinds.Phone.TYPE);
             int photoUri = contactsCursor.getColumnIndexOrThrow(ContactsContract.Data.PHOTO_THUMBNAIL_URI);
 
+            //MIENTRAS QUE HAYAN CONTACTOS EN LA LISTA, SE VAN COMPLETANDO LAS VARIABLES CON LOS DIFERENTES ATRIBUTOS.
             while (contactsCursor.moveToNext()) {
 
                 String name = contactsCursor.getString(nameIndex);
@@ -65,19 +70,25 @@ public class MyContacts {
                 String type = contactsCursor.getString(phoneType);
                 Uri pUri = Uri.parse(contactsCursor.getString(photoUri));
 
+                //CREAMOS EL OBJETO DEL CONTACTO, Y AGENCIAMOS LOS VALORES COMPLETADAS ANTERIORMENTE
                 ContactItem contact = new ContactItem(contactid, name, number, pUri ,lookUp, raw, type, contactid);
 
+                //AÑADIMOS EL CONTACTO A LA LISTA DE CONTACTOS.
                 contactList.add(contact);
             }
+            //CERRAMOS EL CURSOR, YA QUE NO NECESITAMOS SEGUIR LEYENDO O UTILIZANDO DICHA CONSULTA.
             contactsCursor.close();
         }
+        //DEVOLVEMOS LA LISTA DE CONTACTOS ACTUALIZADA, CON LOS ATRIBUTOS DE CADA CONTACTO
         return contactList;
     }
 
+    //OBTIENE EL CONTACTO SEGÚN LA POSICIÓN, ACCEDIENDO AL ADAPTER DEL RECYCLERVIEW.
     public ContactItem getContactData(int position) {
         return myDataSet.get(position);
     }
 
+    //CUENTA LOS ELEMENTOS O CONTACTOS DE LA LISTA DE CONTACTOS
     public int getCount() {
         return myDataSet.size();
     }
