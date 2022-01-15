@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">U4T7Preferences</string>
+    <string name="tvPlayerName">Player Name</string>
+    <string name="tvLevel">Level</string>
+    <string name="tvScore">Score</string>
+    <string name="btQuit">Quit</string>
+</resources>

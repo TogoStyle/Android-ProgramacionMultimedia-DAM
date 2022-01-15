@@ -1,0 +1,8 @@
+dam/androidantoniovr/u4t7preferences/BuildConfig.java
+ dam.androidantoniovr.u4t7preferences.BuildConfig
+dam/androidantoniovr/u4t7preferences/ShowPreferences.java
+ dam.androidantoniovr.u4t7preferences.ShowPreferences
+dam/androidantoniovr/u4t7preferences/MainActivity.java
+ dam.androidantoniovr.u4t7preferences.MainActivity
+ dam.androidantoniovr.u4t7preferences.MainActivity$1
+ dam.androidantoniovr.u4t7preferences.MainActivity$2

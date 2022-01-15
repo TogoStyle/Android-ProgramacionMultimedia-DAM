@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">U4T7Preferences</string>
+    <string name="tvPlayerName">Player Name</string>
+    <string name="tvLevel">Level</string>
+    <string name="tvScore">Score</string>
+    <string name="btQuit">Quit</string>
+    <string name="tvSoundActive">Sound Active</string>
+    <string name="tvBackground">Background</string>
+    <string name="tvDifficulty">Difficulty</string>
+    <string name="tvEasy">Easy</string>
+    <string name="tvNormal">Normal</string>
+    <string name="tvHard">Hard</string>
+    <string name="tvVeryHard">Very Hard</string>
+    <string name="tvExpert">Expert</string>
+    <string name="getSharedPreferences">getSharedPreferences</string>
+    <string name="getPreferences">getPreferences</string>
+    <string name="getDefaultSharedPreferences">getDefaultSharedPreferences</string>
+    <string name="ShowPreferencesFile">Show Preferences File</string>
+    <string name="title">Showing shared prefs file:</string>
+</resources>
