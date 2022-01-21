@@ -1,4 +1,4 @@
-#Sat Jan 15 17:00:24 CET 2022
+#Mon Jan 17 18:35:01 CET 2022
 base.2=/home/tonivr/AndroidStudioProjects/ProgramacionMultimedia/ProgramacionMultimedia/U4T7Preferences/app_activ3/build/intermediates/dex/debug/mergeProjectDexDebug/2/classes.dex
 path.2=2/classes.dex
 base.1=/home/tonivr/AndroidStudioProjects/ProgramacionMultimedia/ProgramacionMultimedia/U4T7Preferences/app_activ3/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex

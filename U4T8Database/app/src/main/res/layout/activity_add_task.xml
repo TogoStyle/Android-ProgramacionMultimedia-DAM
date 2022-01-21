@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_add_task"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    tools:context=".AddTaskActivity">
+
+    <EditText
+        android:id="@+id/etTodo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/name_of_the_task_to_do"
+        android:ems="25"
+        android:maxLength="25"
+        android:textColor="@color/design_default_color_primary_dark"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/etToAccomplish"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/to_finish_when"
+        android:maxLength="50"
+        app:layout_constraintEnd_toEndOf="@+id/etTodo"
+        app:layout_constraintStart_toStartOf="@+id/etTodo"
+        app:layout_constraintTop_toBottomOf="@+id/etTodo"/>
+
+    <EditText
+        android:id="@+id/etDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/describe_the_task"
+        android:maxLength="100"
+        app:layout_constraintEnd_toEndOf="@+id/etToAccomplish"
+        app:layout_constraintStart_toStartOf="@+id/etToAccomplish"
+        app:layout_constraintTop_toBottomOf="@+id/etToAccomplish"/>
+
+    <Button
+        android:id="@+id/buttonOK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:onClick="onClick"
+        android:text="OK"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etDescription"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

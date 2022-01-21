@@ -278,8 +278,6 @@ public class MainActivity extends AppCompatActivity {
             final MediaPlayer mp = MediaPlayer.create(this, R.raw.notification212);
             mp.start();
         }
-
-
     }
 
 
