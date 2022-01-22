@@ -8,3 +8,5 @@ dependencyResolutionManagement {
 }
 rootProject.name = "U4T8Database"
 include ':app'
+include ':app_activ1'
+include ':app_activ2'
