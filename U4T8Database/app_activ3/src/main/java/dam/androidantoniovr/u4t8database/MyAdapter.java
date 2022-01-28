@@ -3,6 +3,8 @@ package dam.androidantoniovr.u4t8database;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -10,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import dam.androidantoniovr.u4t8database.data.TodoListDBManager;
 import dam.androidantoniovr.u4t8database.model.Task;
@@ -65,8 +68,34 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         this.listener = listener;
     }
 
+    //TODO - métodos encargados de mostrar desde el adapter la opcion de filtrado seleccionada.
     public void getData(){
         this.myTaskList = todoListDBManager.getTasks();
+        notifyDataSetChanged();
+    }
+
+    public void notStarted(){
+       this.myTaskList = todoListDBManager.notStarted();
+       notifyDataSetChanged();
+    }
+    public void completed(){
+        this.myTaskList = todoListDBManager.completed();
+        notifyDataSetChanged();
+    }
+
+    public void inProgress(){
+        this.myTaskList = todoListDBManager.inProgress();
+        notifyDataSetChanged();
+    }
+    public void deleteCompleted(){
+        todoListDBManager.deleteCompleted();
+        getData();
+        notifyDataSetChanged();
+    }
+
+    public void deleteAll(){
+        todoListDBManager.dropTable();
+        getData();
         notifyDataSetChanged();
     }
 
@@ -87,4 +116,5 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     public int getItemCount() {
         return myTaskList.size();
     }
+
 }

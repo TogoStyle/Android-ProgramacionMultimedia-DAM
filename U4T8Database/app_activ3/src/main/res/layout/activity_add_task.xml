@@ -2,14 +2,14 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_edit_task"
+    android:id="@+id/activity_add_task"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:padding="16dp"
-    tools:context=".EditTaskActivity">
+    tools:context=".AddTaskActivity">
 
     <EditText
-        android:id="@+id/etTodoEdit"
+        android:id="@+id/etTodo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/name_of_the_task_to_do"
@@ -22,36 +22,36 @@
         app:layout_constraintTop_toTopOf="parent"/>
 
     <EditText
-        android:id="@+id/etToAccomplishEdit"
+        android:id="@+id/etToAccomplish"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="@string/to_finish_when"
         android:maxLength="50"
-        app:layout_constraintEnd_toEndOf="@+id/etTodoEdit"
-        app:layout_constraintStart_toStartOf="@+id/etTodoEdit"
-        app:layout_constraintTop_toBottomOf="@+id/etTodoEdit"/>
+        app:layout_constraintEnd_toEndOf="@+id/etTodo"
+        app:layout_constraintStart_toStartOf="@+id/etTodo"
+        app:layout_constraintTop_toBottomOf="@+id/etTodo"/>
 
     <TextView
-        android:id="@+id/txtPriorityEdit"
+        android:id="@+id/txtPriority"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="@string/Priority"
         android:textColor="#000000"
 
-
+        app:layout_constraintBottom_toTopOf="@+id/spPriority"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etToAccomplishEdit" />
+        app:layout_constraintTop_toBottomOf="@id/etToAccomplish" />
 
     <Spinner
-        android:id="@+id/spPriorityEdit"
+        android:id="@+id/spPriority"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtPriorityEdit" />
+        app:layout_constraintTop_toBottomOf="@id/txtPriority" />
 
     <TextView
-        android:id="@+id/txtStatusEdit"
+        android:id="@+id/txtStatus"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -59,42 +59,37 @@
         android:text="Status:"
 
         android:textColor="#000000"
-        app:layout_constraintBottom_toTopOf="@+id/spPriorityEdit"
+        app:layout_constraintBottom_toTopOf="@+id/spPriority"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etToAccomplishEdit" />
+        app:layout_constraintTop_toBottomOf="@id/etToAccomplish" />
 
     <Spinner
-        android:id="@+id/spStatusEdit"
+        android:id="@+id/spStatus"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@+id/txtStatusEdit"
-        app:layout_constraintTop_toBottomOf="@id/txtPriorityEdit" />
+        app:layout_constraintStart_toStartOf="@+id/txtStatus"
+        app:layout_constraintTop_toBottomOf="@id/txtPriority" />
 
     <EditText
-        android:id="@+id/etDescriptionEdit"
+        android:id="@+id/etDescription"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:hint="@string/describe_the_task"
         android:maxLength="100"
-        app:layout_constraintEnd_toEndOf="@+id/etToAccomplishEdit"
-        app:layout_constraintStart_toStartOf="@+id/etToAccomplishEdit"
-        app:layout_constraintTop_toBottomOf="@+id/spPriorityEdit" />
+        app:layout_constraintEnd_toEndOf="@+id/etToAccomplish"
+        app:layout_constraintStart_toStartOf="@+id/etToAccomplish"
+        app:layout_constraintTop_toBottomOf="@+id/spPriority" />
 
     <Button
-        android:id="@+id/btDelete"
+        android:id="@+id/buttonOK"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/etDescriptionEdit"
-        app:layout_constraintStart_toStartOf="@id/etDescriptionEdit"
-        android:text="Delete" />
-
-    <Button
-        android:id="@+id/btSave"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/etDescriptionEdit"
-        app:layout_constraintEnd_toEndOf="@id/etDescriptionEdit"
-        android:text="Save" />
+        android:layout_marginTop="16dp"
+        android:onClick="onClick"
+        android:text="OK"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etDescription"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

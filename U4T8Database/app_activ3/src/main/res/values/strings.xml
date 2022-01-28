@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">U4T8Database</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="ok">OK</string>
+    <string name="task_data_empty">"Task name is empty"</string>
+    <string name="to_finish_when">To finish when?</string>
+    <string name="describe_the_task">Describe the Task</string>
+    <string name="add_task_activity_name">New Task</string>
+    <string name="name_of_the_task_to_do">Name of the task to do</string>
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="Priority">Priority:</string>
+
+</resources>

@@ -1,0 +1,61 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="dam.androidantoniovr.u4t8database.MainActivity">
+
+    <item
+        android:id="@+id/action_list"
+        android:icon="@android:drawable/ic_menu_view"
+        android:title="action_list"
+        app:showAsAction="always" >
+
+        <menu>
+            <item
+                android:id="@+id/menuNotStarted"
+                android:title="Not Started"
+                app:showAsAction="never" />
+
+            <item
+                android:id="@+id/menuInProgress"
+                android:title="In Progress"
+                app:showAsAction="never" />
+
+            <item
+                android:id="@+id/menuCompleted"
+                android:title="Completed"
+                app:showAsAction="never" />
+
+            <item
+                android:id="@+id/menuAll"
+                android:title="Show All"
+                app:showAsAction="never" />
+
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/action_delete"
+        android:icon="@android:drawable/ic_menu_delete"
+        android:title="action_delete"
+        app:showAsAction="always" >
+
+
+        <menu>
+            <item
+                android:id="@+id/menuDeleteCompleted"
+                android:title="Delete Completed"
+                app:showAsAction="never" />
+
+            <item
+                android:id="@+id/menuDeleteAll"
+                android:title="Delete All"
+                app:showAsAction="never" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+</menu>

@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity implements MyAdapter.OnTaskC
 
     private RecyclerView rvTodoList;
     private TodoListDBManager todoListDBManager;
-    private MyAdapter myAdapter;
+    private MyAdapter myAdapter;;
     private Dialog dialog;
 
 
@@ -52,7 +52,6 @@ public class MainActivity extends AppCompatActivity implements MyAdapter.OnTaskC
 
         todoListDBManager = new TodoListDBManager(this);
         myAdapter = new MyAdapter(todoListDBManager, this);
-
         setUI();
 
     }
@@ -97,17 +96,33 @@ public class MainActivity extends AppCompatActivity implements MyAdapter.OnTaskC
         return true;
     }
 
+
+    //TODO - Menus para filtrado.
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        switch (id){
+            case R.id.menuNotStarted:
+                myAdapter.notStarted();
+                break;
+            case R.id.menuCompleted:
+                myAdapter.completed();
+                break;
+            case R.id.menuInProgress:
+                myAdapter.inProgress();
+                break;
+            case R.id.menuAll:
+                myAdapter.getData();
+                break;
+            case R.id.menuDeleteCompleted:
+                myAdapter.deleteCompleted();
+                break;
+            case R.id.menuDeleteAll:
+                myAdapter.deleteAll();
+                break;
         }
+
 
         return super.onOptionsItemSelected(item);
     }

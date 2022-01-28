@@ -94,11 +94,35 @@ public class TodoListDBManager {
         return taskList;
     }
 
+
+
+
+    //TODO - Borramos la Task.
     public void deleteTask(int idTask){
         SQLiteDatabase sqLiteDatabase = todoListDBHelper.getWritableDatabase();
 
         if (sqLiteDatabase != null){
             sqLiteDatabase.delete(TodoListDBContract.Tasks.TABLE_NAME, TodoListDBContract.Tasks._ID + " = ?", new String[]{String.valueOf(idTask)});
+        }
+    }
+
+    //TODO - Editamos la Task
+    public void editTask(Task task){
+        SQLiteDatabase sqLiteDatabase = todoListDBHelper.getWritableDatabase();
+
+        if (sqLiteDatabase!=null){
+            deleteTask((task.get_id()));
+            ContentValues contentValue = new ContentValues();
+
+            contentValue.put(TodoListDBContract.Tasks._ID, task.get_id());
+            contentValue.put(TodoListDBContract.Tasks.TODO, task.getTodo());
+            contentValue.put(TodoListDBContract.Tasks.TO_ACCOMPLISH, task.getToAccomplish());
+            contentValue.put(TodoListDBContract.Tasks.DESCRIPTION, task.getDescription());
+            //TODO - agregamos prioridad y status al abrir la base de datos en lectura y escritura
+            contentValue.put(TodoListDBContract.Tasks.PRIORITY, task.getPriority());
+            contentValue.put(TodoListDBContract.Tasks.STATUS, task.getStatus());
+
+            sqLiteDatabase.insert(TodoListDBContract.Tasks.TABLE_NAME, null, contentValue);
         }
     }
 
