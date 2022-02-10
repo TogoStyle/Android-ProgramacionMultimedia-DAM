@@ -17,8 +17,11 @@
         <entry key="app_activ2/src/main/res/layout/activity_add_task.xml" value="0.37916666666666665" />
         <entry key="app_activ2/src/main/res/layout/activity_edit_task.xml" value="0.21510416666666668" />
         <entry key="app_activ2/src/main/res/layout/item_layout.xml" value="0.37916666666666665" />
-        <entry key="app_activ3/src/main/res/layout/activity_main.xml" value="0.196875" />
-        <entry key="app_activ3/src/main/res/layout/content_main.xml" value="0.196875" />
+        <entry key="app_activ3/src/main/res/layout/activity_add_task.xml" value="0.1" />
+        <entry key="app_activ3/src/main/res/layout/activity_edit_task.xml" value="0.2966485507246377" />
+        <entry key="app_activ3/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app_activ3/src/main/res/layout/content_main.xml" value="0.1" />
+        <entry key="app_activ3/src/main/res/layout/item_layout.xml" value="0.35833333333333334" />
         <entry key="app_activ3/src/main/res/menu/menu_main.xml" value="0.22" />
       </map>
     </option>

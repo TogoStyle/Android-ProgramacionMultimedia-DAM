@@ -53,7 +53,6 @@ public class MainActivity extends AppCompatActivity implements MyAdapter.OnTaskC
         todoListDBManager = new TodoListDBManager(this);
         myAdapter = new MyAdapter(todoListDBManager, this);
         setUI();
-
     }
 
     private void setUI(){
@@ -85,7 +84,6 @@ public class MainActivity extends AppCompatActivity implements MyAdapter.OnTaskC
     public void onDestroy(){
 
         todoListDBManager.close();
-
         super.onDestroy();
     }
 
